@@ -20,9 +20,13 @@ import {
 } from '../components/styled-components';
 
 export const Details = () => {
-  const { slug } = useParams();
+  // State //
   const [details, setDetails] = useState(null);
 
+  // Params //
+  const { slug } = useParams();
+
+  // useEffects //
   useEffect(() => {
     const handleFetch = async () => {
       const response = await fetchRepoDetails(slug);
@@ -31,10 +35,12 @@ export const Details = () => {
     handleFetch();
   }, [slug]);
 
+  // Prevent early rendering
   if (!details) {
     return null;
   }
 
+  // Details
   const {
     name,
     description,

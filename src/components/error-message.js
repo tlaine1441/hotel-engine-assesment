@@ -19,5 +19,9 @@ export const ErrorMessage = ({ error }) => {
 };
 
 ErrorMessage.propTypes = {
-  error: PropTypes.instanceOf(Object).isRequired,
+  error: PropTypes.instanceOf(Object),
+};
+
+ErrorMessage.defaultProps = {
+  error: {},
 };

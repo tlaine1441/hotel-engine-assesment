@@ -14,6 +14,9 @@ const port = 8081;
 
 app.use(cors());
 
+// Routes //
+
+// Search Route
 app.get('/search', async (req, res, next) => {
   const {
     term,
@@ -29,6 +32,7 @@ app.get('/search', async (req, res, next) => {
     order,
   };
 
+  // Cache //
   const cachedParams = cache.get('searchParams', {
     term, page, lang, order,
   });
@@ -38,6 +42,7 @@ app.get('/search', async (req, res, next) => {
     return res.send(JSON.stringify(cachedSearchResults));
   }
 
+  // Non-Cached Results //
   try {
     const results = await getSearchResults(next, term, page, lang, order);
     cache.set('searchResults', results);
@@ -48,9 +53,11 @@ app.get('/search', async (req, res, next) => {
   }
 });
 
-app.get('/search/:id', async (req, res, next) => {
+// Details Route
+app.get('/details/:id', async (req, res, next) => {
   const { id } = req.params;
 
+  // Cache //
   const cachedId = cache.get('id', id);
   const cachedDetails = cache.get('details');
 
@@ -58,6 +65,7 @@ app.get('/search/:id', async (req, res, next) => {
     return res.send(JSON.stringify(cachedDetails));
   }
 
+  // Non-Cached Results //
   try {
     const results = await getRepoDetails(next, id);
     cache.set('details', results);

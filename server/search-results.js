@@ -1,12 +1,10 @@
 const axios = require('axios');
-
 const baseSearchURL = 'https://api.github.com/search/repositories';
 
 const getSearchResults = async (next, searchTerm, page, lang, order) => {
   try {
     const response = await axios.get(`${baseSearchURL}?q=${searchTerm}+language:${lang}&page=${page}&sort=stars&order=${order}&per_page=50`);
     const { data } = response;
-
     const { total_count, items } = data; // eslint-disable-line camelcase
 
     const mapItems = items.map((item) => {

@@ -14,10 +14,12 @@ import {
 } from './styled-components';
 
 export const Result = ({ result }) => {
+  // String Constants //
   const AUTHOR = 'Author:';
   const NO_DESCRIPTION = 'No Description';
   const NO_LANGUAGE_DETECTED = 'No Language Detected';
 
+  // Constants //
   const {
     id,
     name,

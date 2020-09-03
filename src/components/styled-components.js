@@ -5,9 +5,9 @@ import {
 import { colors } from '../tokens/colors';
 
 export const StyledPageContainer = styled.main`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   padding: 0 150px 40px;
   min-height: 100vh;
@@ -24,9 +24,9 @@ export const StyledPageContainer = styled.main`
 
     & > p {
       font-size: 16px;
-      text-align: center;
-      max-width: 600px;
       line-height: 25px;
+      max-width: 600px;
+      text-align: center;
     }
 
   }
@@ -47,14 +47,14 @@ export const PageTitle = styled.h1`
 `;
 
 export const SubTitle = styled.p`
+  line-height: 25px;
   margin-top: 0;
   text-align: center;
-  line-height: 25px;
 `;
 
 export const ResultsInfoWrapper = styled.div`
-  display: flex;
   align-items: flex-end;
+  display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
   width: 100%;
@@ -108,8 +108,8 @@ export const InlineLabel = styled.span`
 `;
 
 export const Text = styled.p`
-  display: flex;
   align-items: center;
+  display: flex;
   font-size: 14px;
   font-weight: 400;
   margin: 0 0 10px;
@@ -121,9 +121,9 @@ export const Row = styled.div`
 `;
 
 export const RowItem = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
   margin-right: 50px;
 
   p {
@@ -165,12 +165,12 @@ export const HelperText = styled.span`
 `;
 
 export const ErrorMessageContainer = styled.div`
-  width: 100%;
-  padding: 20px;
-  display: flex;
   align-items: center;
+  background: ${colors.crimsion};
+  display: flex;
+  padding: 20px;
   justify-content: center;
-  background: crimson;
+  width: 100%;
 
   p {
     color: white;
@@ -178,15 +178,15 @@ export const ErrorMessageContainer = styled.div`
 `;
 
 export const StarCount = styled.span`
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 `;
 
 export const RepoStatsRow = styled.div`
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-bottom: 40px;
 `;
 

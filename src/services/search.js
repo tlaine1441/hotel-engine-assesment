@@ -9,7 +9,7 @@ const requestFilteredSearchResults = (searchTerm, page, lang, order) => (
 );
 
 const requestRepoDetails = (id) => (
-  request.get(`/search/${id}`)
+  request.get(`/details/${id}`)
 );
 
 export const fetchSearchResults = async (searchVal, pageNumber, order) => {

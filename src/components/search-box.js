@@ -15,8 +15,10 @@ import {
 export const SearchBox = ({
   placeholder, handleSearch, onChange, value,
 }) => {
+  // Constants //
   const enterKeyCode = 13;
 
+  // Callbacks //
   const handleOnClick = useCallback(() => (
     (value.length > 0) ? handleSearch(value) : null
   ), [handleSearch, value]);

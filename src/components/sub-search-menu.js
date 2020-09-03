@@ -28,5 +28,9 @@ export const SubSearchMenu = ({ itemCount, onSelectChange, value }) => {
 SubSearchMenu.propTypes = {
   itemCount: PropTypes.number.isRequired,
   onSelectChange: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
+};
+
+SubSearchMenu.defaultProps = {
+  value: undefined,
 };

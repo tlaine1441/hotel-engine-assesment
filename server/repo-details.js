@@ -1,5 +1,4 @@
 const axios = require('axios');
-
 const baseURL = 'https://api.github.com/repositories';
 
 const getRepoDetails = async (next, id) => {
@@ -16,7 +15,6 @@ const getRepoDetails = async (next, id) => {
     } = data;
 
     const _private = data.private;
-
     const { avatar_url } = owner; // eslint-disable-line camelcase
 
     const newObjectShape = {
