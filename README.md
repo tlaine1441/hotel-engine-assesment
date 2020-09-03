@@ -8,7 +8,7 @@ Github Repo Search allows you to search and find relevant repositories (kind of 
 
 
 
-TIP: You can also filter results by **Stars**
+TIP: You can also sort results by **Stars**
 
 
 
