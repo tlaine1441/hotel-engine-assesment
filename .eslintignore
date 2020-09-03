@@ -1,0 +1,4 @@
+aws-exports.js
+src/serviceWorker.js
+App.test.js
+amplify
