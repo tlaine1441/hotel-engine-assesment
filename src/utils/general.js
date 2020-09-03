@@ -16,11 +16,7 @@ export const calculatePageCount = (totalCount) => {
 
 export const getUrlSearchParams = (searchParams) => {
   const langParam = searchParams.get('lang');
-
-  if (langParam) {
-    return `${searchParams.get('term')} | ${searchParams.get('lang')}`;
-  }
-
+  if (langParam) return `${searchParams.get('term')} | ${searchParams.get('lang')}`;
   return searchParams.get('term');
 };
 
