@@ -1,5 +1,4 @@
-# Welcome to the Github Repo Search
-
+# Welcome to the Github Repo Search 🎉
 
 
 Here you can search and find relevant repositories. Type the name of a repo you would like to find in the search bar. If you are struggling with too many results try narrowing them down by language. Just a '|' after the name and specify your language (eg. tesla | javascript).
